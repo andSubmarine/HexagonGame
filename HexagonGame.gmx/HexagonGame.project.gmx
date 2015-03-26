@@ -5,9 +5,19 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Tiles">
+      <sprite>sprites\spr_tile_par</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Tiles">
+      <object>objects\obj_tile_par</object>
+      <object>objects\obj_tile_water</object>
+    </objects>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
