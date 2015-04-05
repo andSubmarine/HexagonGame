@@ -53,32 +53,32 @@ movement = 15;
           <argument>
             <kind>1</kind>
             <string>/// Camera movement controlled by defeault by the arrow keys
-xpositive = keyboard_check(vk_right);
-xnegative = keyboard_check(vk_left);
-ypositive = keyboard_check(vk_down);
-ynegative = keyboard_check(vk_up);
+right   = keyboard_check(vk_right);
+left    = -keyboard_check(vk_left);
+down    = keyboard_check(vk_down);
+up      = -keyboard_check(vk_up);
 
 // Determine direction to move towards:
-if (x &gt; movement * 2 and x &lt; room_width - movement * 2) {
-    if (xpositive == true and xnegative != true) {
-        x += movement;
-    } else if (xpositive != true and xnegative == true) {
-        x -= movement;
-    }
-} else if (x &gt; movement * 2 + 1 and not (x &lt; room_width - movement * 2)) {
-    if (xpositive == true and xnegative != true) {
+xmove = right + left;   // If positive move right, if negative move left
+ymove = down + up;      // If positive move down, if negative move up
+
+// Specific movements
+if (xmove == 1) {
+    if (x &lt; (room_width - 64)) {
         x += movement;
     }
-} else if (not (x &gt; movement * 2) and not (x &lt; room_width - movement * 2 - 1)) {
-    if (xpositive != true and xnegative == true) {
+} else if (xmove == -1) {
+    if (x &gt;= 64) {
         x -= movement;
     }
 }
 
-if (y &gt; movement * 2 and y &lt; room_height - movement * 2) {   
-    if (ypositive == true and ynegative != true) {
+if (ymove == 1) {
+    if (y &lt; (room_height - 64)) {
         y += movement;    
-    } else if (ypositive != true and ynegative == true) {
+    }
+} else if (ymove == -1) {
+    if (y &gt;= 64) {
         y -= movement;
     }
 }
