@@ -20,6 +20,7 @@
   <scripts name="scripts">
     <scripts name="World Generation Scripts">
       <script>scripts\scr_createGrid.gml</script>
+      <script>scripts\scr_calSize.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

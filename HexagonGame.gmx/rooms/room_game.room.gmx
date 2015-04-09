@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>16744448</colour>
   <showcolour>-1</showcolour>
-  <code>scr_createGrid();</code>
+  <code>global.paused = false;
+
+scr_createGrid(20,20);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>

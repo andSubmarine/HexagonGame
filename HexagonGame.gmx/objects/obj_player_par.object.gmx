@@ -62,24 +62,26 @@ up      = -keyboard_check(vk_up);
 xmove = right + left;   // If positive move right, if negative move left
 ymove = down + up;      // If positive move down, if negative move up
 
-// Specific movements
-if (xmove == 1) {
-    if (x &lt; (room_width - 64)) {
-        x += movement;
+// Specific movements &lt;- only if game is not paused
+if (global.paused != true) {
+    if (xmove == 1) {
+        if (x &lt; (room_width - 64)) {
+            x += movement;
+        }
+    } else if (xmove == -1) {
+        if (x &gt;= 64) {
+            x -= movement;
+        }
     }
-} else if (xmove == -1) {
-    if (x &gt;= 64) {
-        x -= movement;
-    }
-}
 
-if (ymove == 1) {
-    if (y &lt; (room_height - 64)) {
-        y += movement;    
-    }
-} else if (ymove == -1) {
-    if (y &gt;= 64) {
-        y -= movement;
+    if (ymove == 1) {
+        if (y &lt; (room_height - 64)) {
+            y += movement;    
+        }
+    } else if (ymove == -1) {
+        if (y &gt;= 64) {
+            y -= movement;
+        }
     }
 }
 </string>
