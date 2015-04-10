@@ -17,8 +17,8 @@ with(cTile) {
 global.tileArray[cq,cr] = cTile;
 
 // Creates terrain based on the size of the land:
+
 landsize = floor(cq / 2) * 100;
-i = 0;
 for (q = 0; q <= lenQ - 1; q++) {
     lenR = array_length_2d(global.tileArray,q);
     for (r = 0; r <= lenR - 1; r++) {
@@ -33,8 +33,6 @@ for (q = 0; q <= lenQ - 1; q++) {
                 }
                 global.tileArray[q,r] = tTile;
             }
-            i++;
         }
     }
 }
-show_message(string(i));

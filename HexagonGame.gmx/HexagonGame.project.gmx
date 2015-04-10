@@ -22,6 +22,7 @@
       <script>scripts\scr_createGrid.gml</script>
       <script>scripts\scr_calSize.gml</script>
       <script>scripts\scr_terrainGenerator.gml</script>
+      <script>scripts\scr_setSettings.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
