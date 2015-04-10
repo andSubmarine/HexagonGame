@@ -12,8 +12,8 @@ with (tile0) {
 global.tileArray[0,0] = tile0;
 
 // Creates the other tiles using the first tile
-for (q = 0; q < minQ; q++) {
-    for (r = 0; r < minR; r++) {
+for (q = 0; q <= minQ; q++) {
+    for (r = 0; r <= minR; r++) {
         xt = q * 75 + tile0.x;
         yt = r * -86 + tile0.y + 43 * q;
         if (xt <= w && yt <= h) {
@@ -22,6 +22,7 @@ for (q = 0; q < minQ; q++) {
                 q = other.q; 
                 r = other.r;
             }
+            global.tileArray[q,r] = tile;
         }
     }
 }

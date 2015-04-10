@@ -12,7 +12,10 @@
   <showcolour>-1</showcolour>
   <code>global.paused = false;
 
-scr_createGrid(20,20);</code>
+q = 14;
+r = 16;
+scr_createGrid(q,r);
+scr_terrainGenerator(q,r);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>

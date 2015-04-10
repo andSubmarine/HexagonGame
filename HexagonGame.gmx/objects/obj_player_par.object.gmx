@@ -26,8 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initializing variables
-x = room_width / 2
-y = room_height / 2
+x = room_width / 2;
+y = room_height / 2;
+
+lastMouseX = x;
+lastMouseY = y;
 
 movement = 15;
 </string>
@@ -57,6 +60,8 @@ right   = keyboard_check(vk_right);
 left    = -keyboard_check(vk_left);
 down    = keyboard_check(vk_down);
 up      = -keyboard_check(vk_up);
+mousex  = mouse_x;
+mousey  = mouse_y;
 
 // Determine direction to move towards:
 xmove = right + left;   // If positive move right, if negative move left
@@ -84,6 +89,16 @@ if (global.paused != true) {
         }
     }
 }
+/*
+// If the mouse is also moved, then the player will also move accordingly
+if (lastMouseX != mousex or lastMouseY != mousey) {
+    x = mousex;
+    y = mousey;
+}
+
+lastMouseX = mousex;
+lastMouseY = mousey;
+*/
 </string>
           </argument>
         </arguments>

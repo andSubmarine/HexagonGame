@@ -6,7 +6,7 @@ minr = argument4;
 
 if (mode == 1) {
     minq = w / 75 + 1;   
-    minr =
+    minr = 0;
 } else if (mode == 2) {
     w = 75 * q - 75;
     

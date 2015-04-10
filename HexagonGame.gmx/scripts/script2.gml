@@ -1,11 +1,4 @@
-mode = argument0;
-w = argument1;
-h = argument2;
-minq = argument3;
-minr = argument4;
+q = argument0;
+r = argument1;
 
-if (mode == 1) {
-    minq = w / 75 + 1;   
-} else if (mode == 2) {
-    w = 75 * q - 75;
-}
+global.tileArray[0];

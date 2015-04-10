@@ -28,6 +28,8 @@
             <string>/// Initializing variables
 q = 0;
 r = 0;
+
+drawCoor = false;   // whether the coordinates of the tile should be drawed
 </string>
           </argument>
         </arguments>
@@ -51,9 +53,12 @@ r = 0;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_set_alpha(2);
-draw_text(x-16,y-8,"q: "+string(q));
-draw_text(x-16,y+8,"r: "+string(r));
+
+if (drawCoor == true) {
+    draw_set_alpha(2);
+    draw_text(x-16,y-8,"q: "+string(q));
+    draw_text(x-16,y+8,"r: "+string(r));
+}
 </string>
           </argument>
         </arguments>
