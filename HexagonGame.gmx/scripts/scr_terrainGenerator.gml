@@ -16,9 +16,9 @@ with(cTile) {
 }
 global.tileArray[cq,cr] = cTile;
 
-// Creates terrain based on the size of the land:
-
+// Creates terrain tiles based on the size of the land:
 landsize = floor(cq / 2) * 100;
+// i = 0;
 for (q = 0; q <= lenQ - 1; q++) {
     lenR = array_length_2d(global.tileArray,q);
     for (r = 0; r <= lenR - 1; r++) {
@@ -30,9 +30,27 @@ for (q = 0; q <= lenQ - 1; q++) {
                 with(tTile) {
                     self.q = other.q;
                     self.r = other.r;   
+                    
+                    // Determines terrain type
+                    randNr = random_range(0,100);
+                    if (randNr <= 30) {   
+                        terrain = 0;    // grasslands
+                    } else if (randNr <= 60) {
+                        terrain = 1;    // rocklands
+                    } else if (randNr <= 70) {
+                        terrain = 2;    // swamplands
+                    } else if (randNr <= 100) {
+                        terrain = 3;    // woodlands
+                    }
+                        //show_message(string(randNr))
+                    // Determine terrain 
+                    
                 }
                 global.tileArray[q,r] = tTile;
+                // i++;
             }
         }
     }
 }
+// show_message(string(i));
+

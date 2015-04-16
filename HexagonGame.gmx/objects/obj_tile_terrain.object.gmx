@@ -25,8 +25,60 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Sets the parent value of drawing coordinates to true
-drawCoor = true;
+            <string>// Decides what information should be drawn
+drawCoor = true;    // Sets the parent value of drawing coordinates to true
+drawTerType = false; // Decides whether the terrain value should be drawn
+
+// Sets standard terrain value
+terrain = 0; // zero is type grasslands
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Displays terrain based on type
+if (terrain == 1) {
+    sprite_index = spr_tile_rocks;
+} else if (terrain == 2) {
+    sprite_index = spr_tile_swamp;
+} else if (terrain == 3) {
+    sprite_index = spr_tile_wood;
+} else {
+    sprite_index = spr_tile_grass;
+}
+
+// Draws itself
+draw_self();
+
+// Draws the coordinates
+if (drawCoor == true) {
+    draw_set_alpha(2);
+    draw_text(x-16,y-8,"q: "+string(q));
+    draw_text(x-16,y+8,"r: "+string(r));
+}
+
+// Draws the terrain type
+if (drawTerType == true) {
+    draw_set_alpha(3);
+    draw_text(x-32,y-8,"type: "+string(terrain));
+}
 </string>
           </argument>
         </arguments>

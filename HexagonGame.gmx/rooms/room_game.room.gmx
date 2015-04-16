@@ -13,7 +13,7 @@
   <code>global.paused = false;
 global.viewSize = 0;
 scr_setSettings();
-
+randomize();
 q = 14;
 r = 16;
 scr_createGrid(q,r);

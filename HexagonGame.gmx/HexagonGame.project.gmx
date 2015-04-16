@@ -10,6 +10,9 @@
       <sprite>sprites\spr_tile_par</sprite>
       <sprite>sprites\spr_tile_cp</sprite>
       <sprite>sprites\spr_tile_grass</sprite>
+      <sprite>sprites\spr_tile_rocks</sprite>
+      <sprite>sprites\spr_tile_swamp</sprite>
+      <sprite>sprites\spr_tile_wood</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player1</sprite>

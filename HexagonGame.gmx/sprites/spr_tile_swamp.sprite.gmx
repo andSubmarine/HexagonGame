@@ -5,7 +5,7 @@
   <colkind>0</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>0</bboxmode>
+  <bboxmode>1</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>99</bbox_right>
   <bbox_top>0</bbox_top>
@@ -19,6 +19,6 @@
   <width>100</width>
   <height>86</height>
   <frames>
-    <frame index="0">images\spr_tile_cp_0.png</frame>
+    <frame index="0">images\spr_tile_swamp_0.png</frame>
   </frames>
 </sprite>
