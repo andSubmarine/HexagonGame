@@ -15,6 +15,7 @@ with(cTile) {
     self.r = other.cr;   
 }
 global.tileArray[cq,cr] = cTile;
+global.IDtileArray[cq,cr] = cTile.id;
 
 // Creates terrain tiles based on the size of the land:
 landsize = floor(cq / 2) * 100;
@@ -31,23 +32,10 @@ for (q = 0; q <= lenQ - 1; q++) {
                     self.q = other.q;
                     self.r = other.r;   
                     
-                    // Determines terrain type
-                    randNr = random_range(0,100);
-                    if (randNr <= 30) {   
-                        terrain = 0;    // grasslands
-                    } else if (randNr <= 60) {
-                        terrain = 1;    // rocklands
-                    } else if (randNr <= 70) {
-                        terrain = 2;    // swamplands
-                    } else if (randNr <= 100) {
-                        terrain = 3;    // woodlands
-                    }
-                        //show_message(string(randNr))
-                    // Determine terrain 
-                    
+                    scr_terrainRandomizer(self);
                 }
-                global.tileArray[q,r] = tTile;
-                // i++;
+                global.tileArray[q,r] = tTile;              
+                global.IDtileArray[q,r] = tTile.id;
             }
         }
     }

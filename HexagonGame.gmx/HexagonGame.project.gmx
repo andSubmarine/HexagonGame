@@ -8,14 +8,23 @@
   <sprites name="sprites">
     <sprites name="Tiles">
       <sprite>sprites\spr_tile_par</sprite>
-      <sprite>sprites\spr_tile_cp</sprite>
-      <sprite>sprites\spr_tile_grass</sprite>
-      <sprite>sprites\spr_tile_rocks</sprite>
-      <sprite>sprites\spr_tile_swamp</sprite>
-      <sprite>sprites\spr_tile_wood</sprite>
+      <sprites name="TerrainTypes">
+        <sprite>sprites\spr_tile_cp</sprite>
+        <sprite>sprites\spr_tile_grass</sprite>
+        <sprite>sprites\spr_tile_rocks</sprite>
+        <sprite>sprites\spr_tile_swamp</sprite>
+        <sprite>sprites\spr_tile_wood</sprite>
+      </sprites>
+      <sprites name="Multipliers">
+        <sprite>sprites\spr_multipliers</sprite>
+      </sprites>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\spr_player1</sprite>
+      <sprite>sprites\spr_players</sprite>
+      <sprite>sprites\spr_house</sprite>
+      <sprite>sprites\spr_fortress</sprite>
+      <sprite>sprites\spr_worker</sprite>
+      <sprite>sprites\spr_worker_used</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -26,6 +35,10 @@
       <script>scripts\scr_calSize.gml</script>
       <script>scripts\scr_terrainGenerator.gml</script>
       <script>scripts\scr_setSettings.gml</script>
+      <script>scripts\scr_terrainRandomizer.gml</script>
+    </scripts>
+    <scripts name="Player Scripts">
+      <script>scripts\scr_generate_players.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -33,6 +46,7 @@
       <object>objects\obj_tile_par</object>
       <object>objects\obj_tile_cp</object>
       <object>objects\obj_tile_terrain</object>
+      <object>objects\obj_multiplier</object>
     </objects>
     <objects name="Players">
       <object>objects\obj_player_par</object>

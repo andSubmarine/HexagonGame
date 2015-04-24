@@ -17,7 +17,8 @@ randomize();
 q = 14;
 r = 16;
 scr_createGrid(q,r);
-scr_terrainGenerator(q,r);</code>
+scr_terrainGenerator(q,r);
+scr_generate_players(2);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>
@@ -58,7 +59,6 @@ scr_terrainGenerator(q,r);</code>
   </views>
   <instances>
     <instance objName="obj_player_par" x="512" y="448" name="inst_B603E122" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_par" x="0" y="43" name="inst_86212B2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
