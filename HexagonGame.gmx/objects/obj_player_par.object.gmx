@@ -3,7 +3,7 @@
   <spriteName>spr_players</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-500</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,19 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Initializing variables
-
-// Set graphical properties
-image_xscale = 0.2;
-image_yscale = 0.2;
-image_speed = 0;
-
-// Sets local variables
-movement = 15;
-player_id = 0;
-
-// Centers position
 x = room_width / 2;
 y = room_height / 2;
+
+image_xscale = 0.2;
+image_yscale = 0.2;
+
+lastMouseX = x;
+lastMouseY = y;
+
+movement = 15;
 </string>
           </argument>
         </arguments>
@@ -95,7 +92,6 @@ if (global.paused != true) {
         }
     }
 }
-
 /*
 // If the mouse is also moved, then the player will also move accordingly
 if (lastMouseX != mousex or lastMouseY != mousey) {
