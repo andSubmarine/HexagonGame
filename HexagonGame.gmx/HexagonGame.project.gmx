@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprites name="Tiles">
       <sprite>sprites\spr_tile_par</sprite>
+      <sprite>sprites\spr_tile_highlight</sprite>
       <sprites name="TerrainTypes">
         <sprite>sprites\spr_tile_cp</sprite>
         <sprite>sprites\spr_tile_grass</sprite>
@@ -27,11 +28,10 @@
       <sprite>sprites\spr_worker_used</sprite>
     </sprites>
     <sprites name="GUI">
-      <sprite>sprites\spr_small_button</sprite>
-      <sprite>sprites\spr_small_button_pressed</sprite>
       <sprite>sprites\spr_large_button</sprite>
-      <sprite>sprites\spr_large_button_pressed</sprite>
       <sprite>sprites\spr_panel</sprite>
+      <sprite>sprites\spr_expander</sprite>
+      <sprite>sprites\spr_exp_panel</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -64,6 +64,7 @@
     </objects>
     <objects name="User Interface">
       <object>objects\obj_but_endTurn</object>
+      <object>objects\obj_strucPanel</object>
     </objects>
   </objects>
   <rooms name="rooms">

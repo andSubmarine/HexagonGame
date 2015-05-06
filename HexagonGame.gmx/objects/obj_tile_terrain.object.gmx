@@ -28,6 +28,11 @@
             <string>// Decides what information should be drawn
 drawCoor = false;    // Sets the parent value of drawing coordinates to true
 drawTerType = false; // Decides whether the terrain value should be drawn
+highlight = false;
+
+if (random(2)&lt; 1) {
+    highlight = true;
+}
 
 // Sets standard terrain value
 terrain = 0; // zero is type grasslands
@@ -79,6 +84,11 @@ if (drawTerType == true) {
     draw_set_alpha(20);
     draw_text(x-32,y-8,"type: "+string(terrain));
 }
+
+// Draws highlight if tile is marked
+if (highlight) {
+    draw_sprite(spr_tile_highlight,0,x,y);
+} 
 </string>
           </argument>
         </arguments>
