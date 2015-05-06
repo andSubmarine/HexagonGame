@@ -36,6 +36,12 @@ image_speed = 0;
 movement = 15;
 player_id = 0;
 
+// Arrays for all entities
+entity_0[0] = 0;
+entity_1[0] = 0;
+entity_2[0] = 0;
+entity_3[0] = 0;  
+
 // Centers position
 x = room_width / 2;
 y = room_height / 2;
