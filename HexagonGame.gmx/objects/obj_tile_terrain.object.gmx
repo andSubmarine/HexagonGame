@@ -79,6 +79,11 @@ if (drawTerType == true) {
     draw_set_alpha(20);
     draw_text(x-32,y-8,"type: "+string(terrain));
 }
+
+// Draws structures
+//draw_sprite();
+
+// Draws workers
 </string>
           </argument>
         </arguments>

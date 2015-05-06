@@ -75,6 +75,8 @@ image_speed = 0;
 // Change image_index of the player
 with (global.players) {
     image_index = other.player_turn;
+    player_id = other.player_turn;
+    show_message(string(player_id));
 }
 
 // Reconfigs the number of ressources

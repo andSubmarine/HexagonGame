@@ -33,9 +33,6 @@
       <sprite>sprites\spr_large_button_pressed</sprite>
       <sprite>sprites\spr_panel</sprite>
     </sprites>
-    <sprites name="Ressources">
-      <sprite>sprites\spr_ico_rock</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -56,14 +53,19 @@
     <font>fonts\font_panel_text</font>
   </fonts>
   <objects name="objects">
+    <objects name="Players">
+      <object>objects\obj_player_par</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_fortress</object>
+      <object>objects\obj_village</object>
+      <object>objects\obj_worker</object>
+    </objects>
     <objects name="Tiles">
       <object>objects\obj_tile_par</object>
       <object>objects\obj_tile_cp</object>
       <object>objects\obj_tile_terrain</object>
       <object>objects\obj_multiplier</object>
-    </objects>
-    <objects name="Players">
-      <object>objects\obj_player_par</object>
     </objects>
     <objects name="User Interface">
       <object>objects\obj_but_endTurn</object>
