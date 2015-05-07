@@ -12,6 +12,7 @@
   <showcolour>-1</showcolour>
   <code>global.paused = false;
 global.viewSize = 0;
+global.highlight = 0;
 scr_setSettings();
 randomize();
 q = 14;

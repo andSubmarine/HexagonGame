@@ -30,10 +30,6 @@ drawCoor = false;    // Sets the parent value of drawing coordinates to true
 drawTerType = false; // Decides whether the terrain value should be drawn
 highlight = false;
 
-if (random(2)&lt; 1) {
-    highlight = true;
-}
-
 // Sets standard terrain value
 terrain = 0; // zero is type grasslands
 </string>

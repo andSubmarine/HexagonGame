@@ -83,6 +83,7 @@ rock = global.ressources[player_turn,1];
 food = global.ressources[player_turn,2];
 gold = global.ressources[player_turn,3];
 vp = global.arrayVP[player_turn];
+
 </string>
           </argument>
         </arguments>

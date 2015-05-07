@@ -58,6 +58,7 @@
       <object>objects\obj_tile_cp</object>
       <object>objects\obj_tile_terrain</object>
       <object>objects\obj_multiplier</object>
+      <object>objects\obj_tile_highlight</object>
     </objects>
     <objects name="Players">
       <object>objects\obj_player_par</object>
