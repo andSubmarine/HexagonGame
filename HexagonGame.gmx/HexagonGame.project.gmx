@@ -62,6 +62,12 @@
     </objects>
     <objects name="Players">
       <object>objects\obj_player_par</object>
+      <object>objects\obj_resGather_par</object>
+      <objects name="ResourceGather">
+        <object>objects\obj_village</object>
+        <object>objects\obj_fortress</object>
+        <object>objects\obj_worker</object>
+      </objects>
     </objects>
     <objects name="User Interface">
       <object>objects\obj_but_endTurn</object>

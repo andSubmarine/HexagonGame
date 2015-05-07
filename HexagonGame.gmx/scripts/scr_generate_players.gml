@@ -17,6 +17,18 @@ if (nPlayers <= 4) {
         for (i = 0; i < nr_of_players;i++) {
             global.arrayVP[i] = 0;
         }
+        
+        // Creates array for storage of workers
+        for (i = 0; i < nr_of_players;i++) {
+             iWorker = instance_create(room_width/2-10,room_height/2+20,obj_worker);
+             with (iWorker) {
+                player_id = other.i;
+                image_index = other.i;
+                offsetx = 20;
+                x = x + offsetx * other.i;
+             }
+             global.workers[i,0] = iWorker;
+        }
     }
 } else {
     show_message("Too many players - the game currently supports max 4")

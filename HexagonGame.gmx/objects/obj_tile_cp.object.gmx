@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>// Sets the parent value of drawing coordinates to true
 drawCoor = false;
+i = 0;
 </string>
           </argument>
         </arguments>

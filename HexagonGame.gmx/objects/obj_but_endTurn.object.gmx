@@ -84,6 +84,16 @@ food = global.ressources[player_turn,2];
 gold = global.ressources[player_turn,3];
 vp = global.arrayVP[player_turn];
 
+// Removes any highlight
+if (global.highlight != 0) {
+    with (global.highlight) {
+        instance_destroy();
+    }
+}
+
+// Sets the player position to the center point
+global.players.x = room_width/2;
+global.players.y = room_height/2;
 </string>
           </argument>
         </arguments>

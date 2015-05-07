@@ -3,11 +3,11 @@ tile = argument0;
 with(tile) {
     // Determines terrain type
     randNr = random_range(0,100);
-    if (randNr <= 30) {   
+    if (randNr <= 40) {   
         terrain = 0;    // grasslands
-    } else if (randNr <= 60) {
+    } else if (randNr <= 55) {
         terrain = 1;    // rocklands
-    } else if (randNr <= 70) {
+    } else if (randNr <= 65) {
         terrain = 2;    // swamplands
     } else if (randNr <= 100) {
         terrain = 3;    // woodlands
