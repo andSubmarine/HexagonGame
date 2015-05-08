@@ -26,8 +26,20 @@ if (nPlayers <= 4) {
                 image_index = other.i;
                 offsetx = 20;
                 x = x + offsetx * other.i;
+                q = global.cq;
+                r = global.cr;
              }
              global.workers[i,0] = iWorker;
+        }
+        
+        // Creates array for storage of villages
+        for (i = 0; i < nr_of_players;i++) {
+            global.villages[i,0] = 0;
+        }
+        
+        // Creates array for storage of fortresses
+        for (i = 0; i < nr_of_players;i++) {
+            global.fortresses[i,0] = 0;
         }
     }
 } else {

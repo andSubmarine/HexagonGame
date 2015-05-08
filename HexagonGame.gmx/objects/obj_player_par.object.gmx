@@ -3,7 +3,7 @@
   <spriteName>spr_players</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-500</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -35,12 +35,6 @@ image_speed = 0;
 // Sets local variables
 movement = 15;
 player_id = 0;
-
-// Arrays for all entities
-entity_0[0] = 0;
-entity_1[0] = 0;
-entity_2[0] = 0;
-entity_3[0] = 0;  
 
 // Centers position
 x = room_width / 2;
@@ -135,7 +129,7 @@ lastMouseY = mousey;
           <argument>
             <kind>1</kind>
             <string>// Find the closest tile to the player
-closeTile = instance_nearest(x,y,obj_tile_terrain);
+closeTile = instance_nearest(x,y,obj_tile_par);
 dist = distance_to_point(closeTile.x,closeTile.y);
 if (dist &lt;= closeTile.sprite_width) {
     if (global.highlight != 0) {
@@ -145,6 +139,23 @@ if (dist &lt;= closeTile.sprite_width) {
     }
     global.markedTile = closeTile;
     global.highlight = instance_create(closeTile.x,closeTile.y,obj_tile_highlight);
+}
+
+// Handle if there is a worker with same player_id present on the tile
+nr_of_workers = array_length_2d(global.workers,player_id);
+for (i = 0; i &lt; nr_of_workers; i++) {
+    wq = global.workers[player_id,i].q; 
+    wr = global.workers[player_id,i].r
+    if (wq == closeTile.q &amp;&amp; wr == closeTile.r) {
+        for(j = 0; j &lt; 6; j++) {
+            hTiles[j] = scr_findNearbyTiles(closeTile,j);
+            hTile = instance_create(hTiles[j].x,hTiles[j].y,obj_tile_highlight);
+            with(hTile) {
+                highlightType = 1;
+            }
+            global.highlights[j+1] = hTile;
+        }
+    }
 }
 </string>
           </argument>

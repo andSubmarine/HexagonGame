@@ -46,6 +46,7 @@
     </scripts>
     <scripts name="Player Scripts">
       <script>scripts\scr_generate_players.gml</script>
+      <script>scripts\scr_findNearbyTiles.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -28,8 +28,6 @@
             <string>// The position according to the tile center
 offsetx = 0;
 offsety = 0;
-x = room_width/2;
-y = room_height/2;
 
 // Construction costs
 costWood = 4;

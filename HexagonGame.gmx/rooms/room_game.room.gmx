@@ -63,9 +63,6 @@ scr_generate_players(2);</code>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_BF392C0B" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_6A289755" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
     <instance objName="&lt;undefined&gt;" x="511" y="731" name="inst_0D50A607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_worker" x="438" y="215" name="inst_CE1CD700" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_village" x="365" y="258" name="inst_0C90B0AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fortress" x="438" y="301" name="inst_67F7FCC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_but_endTurn" x="584" y="516" name="inst_F7CC40D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
