@@ -75,6 +75,7 @@ image_speed = 0;
 // Change image_index of the player
 with (global.players) {
     image_index = other.player_turn;
+    player_id = other.player_turn;
 }
 
 // Reconfigs the number of ressources
@@ -89,6 +90,12 @@ if (global.highlight != 0) {
     with (global.highlight) {
         instance_destroy();
     }
+    /*for (i = 0; i &lt; array_length_1d(global.highlights);i++) {
+        with(global.highlights[i]) {
+            instance_destroy();
+        }
+        global.highlights[i] = 0;
+    }*/
 }
 
 // Sets the player position to the center point

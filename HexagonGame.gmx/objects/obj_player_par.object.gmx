@@ -35,6 +35,8 @@ image_speed = 0;
 // Sets local variables
 movement = 15;
 player_id = 0;
+worker_will_move = false;
+mwq = 0; mwr = 0;
 
 // Centers position
 x = room_width / 2;
@@ -141,21 +143,47 @@ if (dist &lt;= closeTile.sprite_width) {
     global.highlight = instance_create(closeTile.x,closeTile.y,obj_tile_highlight);
 }
 
+// Handle movement of a worker
+if (worker_will_move == true) {
+    for (i = 0; i &lt; nr_of_workers; i++) {
+        wq = global.workers[player_id,i].q; 
+        wr = global.workers[player_id,i].r;
+        /*show_message(string(global.markedTile.q)+" ,"+string(global.markedTile.r));
+        show_message(string(wq)+ " ,"+string(wr));*/
+        if (wq == mwq &amp;&amp; wr == mwr) {
+            with(global.workers[player_id,i]) {
+                x = global.markedTile.x;
+                y = global.markedTile.y+20;
+                q = global.markedTile.q;
+                r = global.markedTile.r;
+                with (global.highlight) {
+                    instance_destroy();
+                }
+                global.highlight = 0;
+            }
+        }
+    }
+    worker_will_move = false;
+} else{
 // Handle if there is a worker with same player_id present on the tile
 nr_of_workers = array_length_2d(global.workers,player_id);
 for (i = 0; i &lt; nr_of_workers; i++) {
     wq = global.workers[player_id,i].q; 
-    wr = global.workers[player_id,i].r
-    if (wq == closeTile.q &amp;&amp; wr == closeTile.r) {
-        for(j = 0; j &lt; 6; j++) {
+    wr = global.workers[player_id,i].r;
+    if (wq == global.markedTile.q &amp;&amp; wr == global.markedTile.r) {
+        global.highlight.image_index = 1;
+        worker_will_move = true;
+        mwq = wq; mwr = wr;
+        /*for(j = 0; j &lt; 6; j++) {
             hTiles[j] = scr_findNearbyTiles(closeTile,j);
             hTile = instance_create(hTiles[j].x,hTiles[j].y,obj_tile_highlight);
             with(hTile) {
                 highlightType = 1;
             }
-            global.highlights[j+1] = hTile;
-        }
+            global.highlights[j] = hTile;
+        }*/
     }
+}
 }
 </string>
           </argument>
