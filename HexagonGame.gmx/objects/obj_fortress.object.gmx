@@ -29,12 +29,6 @@
 offsetx = 0;
 offsety = 0;
 
-// Construction costs
-costWood = 4;
-costRock = 6;
-costFood = 2;
-costGold = 10;
-
 // Worker proberties
 worker_supply = 3;
 

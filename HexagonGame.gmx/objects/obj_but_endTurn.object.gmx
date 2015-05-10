@@ -59,7 +59,13 @@ vp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.paused != true) {
+            <string>vp = global.arrayVP[player_turn];
+if (vp &gt;= global.maxVP) {
+    global.paused = true;
+    show_message("Player "+string(player_turn+1)+ " has won the game");
+}
+
+if (global.paused != true) {
 /// Handles everything related to the end of a turn
 nrPlayers = global.players.nr_of_players;
 if (player_turn == nrPlayers - 1) {
@@ -79,13 +85,6 @@ with (global.players) {
     image_index = other.player_turn;
     player_id = other.player_turn;
 }
-
-// Reconfigs the number of ressources
-wood = global.ressources[player_turn,0];
-rock = global.ressources[player_turn,1];
-food = global.ressources[player_turn,2];
-gold = global.ressources[player_turn,3];
-vp = global.arrayVP[player_turn];
 
 // Removes any highlight
 if (global.highlight != 0) {
@@ -129,6 +128,13 @@ global.players.y = room_height/2;
             <kind>1</kind>
             <string>x = view_xview[0]+view_wview[0]/2;
 y = view_yview[0]+20;
+
+// Reconfigs the number of ressources
+wood = global.ressources[player_turn,0];
+rock = global.ressources[player_turn,1];
+food = global.ressources[player_turn,2];
+gold = global.ressources[player_turn,3];
+vp = global.arrayVP[player_turn];
 </string>
           </argument>
         </arguments>

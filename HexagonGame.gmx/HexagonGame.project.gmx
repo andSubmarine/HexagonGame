@@ -52,6 +52,7 @@
       <script>scripts\scr_findNearbyTiles.gml</script>
       <script>scripts\scr_generateRessources.gml</script>
       <script>scripts\scr_checkCost.gml</script>
+      <script>scripts\scr_buyItem.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

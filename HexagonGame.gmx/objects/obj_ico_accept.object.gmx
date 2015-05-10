@@ -48,6 +48,7 @@
             buyable = scr_checkCost(item);
         
             if (buyable == true) {
+                scr_buyItem(item);
                 
             with (header) {
                 instance_destroy();

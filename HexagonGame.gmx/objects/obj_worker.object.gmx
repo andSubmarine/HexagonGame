@@ -29,12 +29,6 @@
 offsetx = 0;
 offsety = -20;
 
-// Construction costs
-costWood = 0;
-costRock = 0;
-costFood = 2;
-costGold = 0;
-
 // Player proberties
 player_id = 0;
 

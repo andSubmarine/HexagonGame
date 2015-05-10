@@ -54,12 +54,13 @@ with(villageItem) {
 fortressItem = instance_create(x-85,y+40,obj_buyerItem);
 with(fortressItem) {
     sprite_index = spr_fortress;
-    text1 = "2 food, 2 wood";
-    costFood = 2; costWood = 2;
-    text2 = "4 stone, 2 gold";
-    costStone = 4; costGold = 2;
+    text1 = "2 food, 4 wood";
+    costFood = 2; costWood = 4;
+    text2 = "6 stone, 4 gold";
+    costStone = 6; costGold = 4;
     ini = true;
     item_id = 3;
+    
 }
 </string>
           </argument>
