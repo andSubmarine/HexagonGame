@@ -113,6 +113,32 @@ lastMouseY = mousey;
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="66">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.highlight != 0) {    // Making sure a tile is highlighted
+    global.paused = true;
+    instance_create(x,y,obj_buyPanel);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="13">
       <action>
         <libid>1</libid>
@@ -132,6 +158,14 @@ lastMouseY = mousey;
             <kind>1</kind>
             <string>// Find the closest tile to the player
 closeTile = instance_nearest(x,y,obj_tile_par);
+tile_type = scr_determineType(closeTile);
+if (tile_type != 0) {
+    if (tile_type == 1) {
+        closeTile = instance_nearest(x,y,obj_tile_cp);
+    } else {
+        closeTile = instance_nearest(x,y,obj_tile_terrain);
+    }
+
 dist = distance_to_point(closeTile.x,closeTile.y);
 if (dist &lt;= closeTile.sprite_width) {
     if (global.highlight != 0) {
@@ -139,8 +173,10 @@ if (dist &lt;= closeTile.sprite_width) {
             instance_destroy();
         }
     }
+    
     global.markedTile = closeTile;
     global.highlight = instance_create(closeTile.x,closeTile.y,obj_tile_highlight);
+}
 }
 
 // Handle movement of a worker
@@ -150,7 +186,7 @@ if (worker_will_move == true) {
         wr = global.workers[player_id,i].r;
         /*show_message(string(global.markedTile.q)+" ,"+string(global.markedTile.r));
         show_message(string(wq)+ " ,"+string(wr));*/
-        if (wq == mwq &amp;&amp; wr == mwr) {
+        if (wq == mwq &amp;&amp; wr == mwr &amp;&amp; tile_type != 0) {
             with(global.workers[player_id,i]) {
                 x = global.markedTile.x;
                 y = global.markedTile.y+20;

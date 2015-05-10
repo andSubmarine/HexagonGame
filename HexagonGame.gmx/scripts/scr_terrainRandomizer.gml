@@ -21,4 +21,5 @@ with(tile) {
         image_index = other.randMult;
     }
     multiplier = randMult;
+    type = 2;
 }

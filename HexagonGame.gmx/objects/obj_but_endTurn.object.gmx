@@ -59,11 +59,13 @@ vp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Changes the image color so its visible whose turn it is
+            <string>if (global.paused != true) {
+/// Handles everything related to the end of a turn
 nrPlayers = global.players.nr_of_players;
 if (player_turn == nrPlayers - 1) {
     player_turn = 0;
     turn++;
+    scr_generateRessources();
 } else {
     player_turn++;
 }
@@ -101,6 +103,8 @@ if (global.highlight != 0) {
 // Sets the player position to the center point
 global.players.x = room_width/2;
 global.players.y = room_height/2;
+
+}
 </string>
           </argument>
         </arguments>

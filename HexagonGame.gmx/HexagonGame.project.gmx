@@ -30,8 +30,10 @@
     <sprites name="GUI">
       <sprite>sprites\spr_large_button</sprite>
       <sprite>sprites\spr_panel</sprite>
-      <sprite>sprites\spr_expander</sprite>
-      <sprite>sprites\spr_exp_panel</sprite>
+      <sprite>sprites\spr_buy_panel</sprite>
+      <sprite>sprites\spr_ico_close</sprite>
+      <sprite>sprites\spr_ico_accept</sprite>
+      <sprite>sprites\spr_ico_highlight</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -43,15 +45,19 @@
       <script>scripts\scr_terrainGenerator.gml</script>
       <script>scripts\scr_setSettings.gml</script>
       <script>scripts\scr_terrainRandomizer.gml</script>
+      <script>scripts\scr_determineType.gml</script>
     </scripts>
     <scripts name="Player Scripts">
       <script>scripts\scr_generate_players.gml</script>
       <script>scripts\scr_findNearbyTiles.gml</script>
+      <script>scripts\scr_generateRessources.gml</script>
+      <script>scripts\scr_checkCost.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_impact</font>
     <font>fonts\font_panel_text</font>
+    <font>fonts\font_buyers_header</font>
   </fonts>
   <objects name="objects">
     <objects name="Tiles">
@@ -73,6 +79,13 @@
     <objects name="User Interface">
       <object>objects\obj_but_endTurn</object>
       <object>objects\obj_strucPanel</object>
+      <objects name="Buyer's Screen">
+        <object>objects\obj_buyPanel</object>
+        <object>objects\obj_buyer_text</object>
+        <object>objects\obj_ico_close</object>
+        <object>objects\obj_ico_accept</object>
+        <object>objects\obj_buyerItem</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
